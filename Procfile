@@ -1,1 +1,1 @@
-java -jar wordwrap-application/target/wordwrap-library-0.0.1-SNAPSHOT.jar
+java -jar wordwrap-application\target\wordwrap-application-2.4.0.jar
