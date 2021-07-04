@@ -1,0 +1,32 @@
+wordwrap:
+  default:
+    length: 15
+    character: \r\n
+
+spring:
+  config:
+    name: validationmessages
+
+  profiles:
+    active: chaos-monkey
+
+chaos:
+  monkey:
+    assaults:
+      level: 8
+      latencyRangeStart: 1000
+      latencyRangeEnd: 10000
+      exceptionsActive: true
+      killApplicationActive: false
+    watcher:
+      repository: true
+      restController: true
+
+management:
+  endpoint:
+    chaosmonkey:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info,chaosmonkey
